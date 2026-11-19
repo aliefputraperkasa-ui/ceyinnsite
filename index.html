@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+<html lang="id" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Ceyinn ♡ Selin Yuliana</title>
+
+    <!-- Tailwind CSS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Mali:ital,wght@0,500;0,700;1,600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --pink-bg: #fff0f5;
+            --pink-soft: #ffd6e7;
+            --pink-medium: #ff9ebb;
+            --pink-hot: #ff5c8d;
+            --pink-dark: #b83b66;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--pink-bg);
+            background-image:
+                radial-gradient(#ffb6c1 1.5px, transparent 1.5px),
+                radial-gradient(#ffd1dc 1.5px, #fff0f5 1.5px);
+            background-size: 36px 36px;
+            background-position: 0 0, 18px 18px;
+            color: #6b2d45;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-cute {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .font-handwriting {
+            font-family: 'Mali', cursive;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(3deg);
+            }
+        }
+
+        @keyframes floatReverse {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-8px) rotate(-4deg);
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% {
+                transform: rotate(-3deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        @keyframes snoopyDance {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg) scale(1);
+            }
+            25% {
+                transform: translateY(-16px) rotate(5deg) scale(1.06);
+            }
+            50% {
+                transform: translateY(0) rotate(-5deg) scale(1);
+            }
+            75% {
+                transform: translateY(-12px) rotate(6deg) scale(1.05);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 35px rgba(255, 182, 193, 0.95), 0 0 75px rgba(255, 92, 141, 0.75);
+            }
+            50% {
+                box-shadow: 0 0 65px rgba(255, 255, 255, 1), 0 0 110px rgba(255, 133, 162, 1);
+            }
+        }
+
+        @keyframes spinRays {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(30px);
+            }
+            70% {
+                opacity: 1;
+                transform: scale(1.08) translateY(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes fallDown {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.85;
+            }
+            85% {
+                opacity: 0.85;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes burstUp {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .animate-float {
+            animation: floatSlow 3.5s ease-in-out infinite;
+        }
+
+        .animate-float-reverse {
+            animation: floatReverse 4s ease-in-out infinite;
+        }
+
+        .animate-wiggle {
+            animation: wiggle 2.2s ease-in-out infinite;
+        }
+
+        .animate-wiggle-hover:hover {
+            animation: wiggle 0.5s ease-in-out infinite;
+        }
+
+        .animate-snoopy-dance {
+            animation: snoopyDance 1.1s ease-in-out infinite;
+        }
+
+        .ribbon-btn {
+            background: linear-gradient(135deg, #ffb3c6 0%, #ff8fab 50%, #fb6f92 100%);
+            border: 3px dashed #ffffff;
+            box-shadow: 0 8px 20px rgba(255, 111, 146, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.75);
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .ribbon-btn:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 12px 28px rgba(255, 92, 141, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.95);
+        }
+
+        .ribbon-btn:active {
+            transform: translateY(1px) scale(0.97);
+        }
+
+        .coquette-card {
+            background: rgba(255, 252, 253, 0.94);
+            backdrop-filter: blur(8px);
+            border: 3px solid #ffc2d1;
+            box-shadow: 0 14px 35px rgba(255, 143, 171, 0.22), 0 4px 10px rgba(255, 194, 209, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .coquette-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 42px rgba(255, 111, 146, 0.3);
+        }
+
+        .light-rays {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: repeating-conic-gradient(
+                from 0deg,
+                rgba(255, 255, 255, 0.65) 0deg 15deg,
+                rgba(255, 194, 209, 0.15) 15deg 30deg
+            );
+            border-radius: 50%;
+            animation: spinRays 10s linear infinite;
+            pointer-events: none;
+            mask-image: radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 70%);
+            -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 70%);
+        }
+
+        .snoopy-spotlight-box {
+            animation: popIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, pulseGlow 2s ease-in-out infinite;
+        }
+
+        .polaroid {
+            background: #ffffff;
+            padding: 12px 12px 30px 12px;
+            border: 2px solid #ffe5ec;
+            box-shadow: 0 10px 25px rgba(214, 93, 134, 0.18);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .polaroid:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 20;
+        }
+
+        .falling-item {
+            position: fixed;
+            top: -50px;
+            pointer-events: none;
+            z-index: 1;
+            animation: fallDown linear infinite;
+        }
+
+        .click-heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: burstUp 0.8s ease-out forwards;
+        }
+
+        /* Detail gambar Snoopy dan elemen dekorasi */
+
+        .snoopy-image {
+            filter: drop-shadow(0 8px 12px rgba(184, 59, 102, 0.25));
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .snoopy-image:hover {
+            transform: scale(1.08) rotate(-3deg);
+            filter: drop-shadow(0 12px 16px rgba(255, 92, 141, 0.35));
+        }
+
+        .snoopy-sparkle {
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+            font-size: 22px;
+            animation: floatSlow 2.2s ease-in-out infinite;
+        }
+
+        .polaroid img {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .polaroid:hover img {
+            transform: scale(1.08);
+            filter: saturate(1.08);
+        }
+
+    </style>
+
+</head>
+
+<body class="relative min-h-screen selection:bg-pink-300 selection:text-white">
+
+    <div id="falling-container" aria-hidden="true"></div>
+
+    <!-- Snoopy Mengintip di Pojok Bawah Kiri -->
+
+    <div class="fixed bottom-4 left-3 z-30 pointer-events-none hidden sm:block animate-float">
+
+        <div class="w-20 h-20 rounded-full bg-white/95 p-2 border-2 border-pink-300 shadow-lg flex items-center justify-center">
+
+            <img
+                src="https://assets.jamcity.com/20210419054719/snoopy-pop-illustration-icon-bottom-right.png"
+                alt="Snoopy dan Woodstock"
+                class="w-16 h-16 object-contain snoopy-image"
+                loading="lazy"
+            >
+
+        </div>
+
+    </div>
+
+    <!-- Header Navbar -->
+
+    <header class="sticky top-3 z-40 px-4 max-w-4xl mx-auto">
+
+        <nav class="bg-white/90 backdrop-blur-md border-2 border-pink-200 rounded-full px-5 py-2.5 shadow-md flex items-center justify-between">
+
+            <a href="#home" class="flex items-center gap-2 font-cute font-bold text-pink-600 text-lg">
+
+                <span class="text-xl animate-wiggle inline-block">🎀</span>
+
+                <span>Ceyinn's World</span>
+
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-bold text-pink-500">
+
+                <a href="#snoopy-like" class="hover:text-pink-700 hover:bg-pink-100 px-3 py-1.5 rounded-full transition">Snoopy 🐶</a>
+
+                <a href="#fav-drink" class="hover:text-pink-700 hover:bg-pink-100 px-3 py-1.5 rounded-full transition">Milk 🥛</a>
+
+                <a href="#besties" class="hover:text-pink-700 hover:bg-pink-100 px-3 py-1.5 rounded-full transition">Besties ✨</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="relative z-10 max-w-4xl mx-auto px-4 pt-8 pb-16 space-y-16 sm:space-y-24">    <!-- FOTO PROFIL CEYINN -->
+
+    <div class="mt-4 mb-6 flex justify-center">
+
+        <div class="relative group">
+
+            <div class="absolute -inset-2 bg-gradient-to-tr from-pink-400 via-pink-200 to-rose-400 rounded-full blur-sm opacity-80 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+
+            <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full p-2 bg-white border-4 border-pink-300 shadow-xl overflow-hidden flex items-center justify-center">
+
+               <img
+    src="data:image/jpeg;base64,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"
+    alt="Foto Selin Yuliana (Ceyinn)"
+    style="object-fit: cover; object-position: center 35%;"
+    class="w-full h-full rounded-full transition-transform duration-500 group-hover:scale-105"
+>
+                >
+
+            </div>
+
+            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-pink-500 text-white text-xs sm:text-sm font-cute font-semibold px-4 py-1 rounded-full border-2 border-white shadow-md whitespace-nowrap">
+                🎀 it's me, Ceyinn! 🎀
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- Teks Perkenalan -->
+
+    <div class="max-w-2xl mx-auto space-y-4 mt-6">
+
+        <h1 class="text-2xl sm:text-4xl font-bold text-pink-600 leading-snug tracking-wide">
+            alloooOOooO namaa akuu <span class="text-rose-500 underline decoration-wavy decoration-pink-300">Selin Yuliana</span>, tapii kaliann bisa panggil aku <span class="bg-pink-100 px-3 py-0.5 rounded-2xl text-pink-600 inline-block animate-wiggle">Ceyinn ^_^</span>
+        </h1>
+
+        <p class="text-base sm:text-xl font-semibold text-pink-800/90 bg-pink-50/90 border-2 border-pink-200 rounded-2xl py-3 px-5 inline-block shadow-sm">
+            website ini dibuat agar kalian bisaa kenall sedikit tentang akuu ✨🌷
+        </p>
+
+    </div>
+
+    <!-- TOMBOL PINK DENGAN PITA PINK DI BORDER -->
+
+    <div class="mt-8 flex flex-col items-center">
+
+        <div class="relative inline-block">
+
+            <!-- Pita Kiri Atas -->
+
+            <svg class="w-10 h-10 absolute -top-5 -left-4 z-20 pointer-events-none animate-wiggle" viewBox="0 0 60 60" fill="none">
+
+                <path d="M30 30C20 15 5 15 5 28C5 41 20 38 30 30Z" fill="#FF5C8D" stroke="#FFF" stroke-width="2.5"/>
+
+                <path d="M30 30C40 15 55 15 55 28C55 41 40 38 30 30Z" fill="#FF5C8D" stroke="#FFF" stroke-width="2.5"/>
+
+                <path d="M25 33L16 48L24 46L29 35" fill="#FF8FAB" stroke="#FFF" stroke-width="2"/>
+
+                <path d="M35 33L44 48L36 46L31 35" fill="#FF8FAB" stroke="#FFF" stroke-width="2"/>
+
+                <circle cx="30" cy="30" r="6" fill="#FFC2D1" stroke="#FFF" stroke-width="2"/>
+
+            </svg>
+
+            <!-- Pita Kanan Bawah -->
+
+            <svg class="w-9 h-9 absolute -bottom-4 -right-4 z-20 pointer-events-none animate-float" viewBox="0 0 60 60" fill="none">
+
+                <path d="M30 30C20 15 5 15 5 28C5 41 20 38 30 30Z" fill="#FF8FAB" stroke="#FFF" stroke-width="2.5"/>
+
+                <path d="M30 30C40 15 55 15 55 28C55 41 40 38 30 30Z" fill="#FF8FAB" stroke="#FFF" stroke-width="2.5"/>
+
+                <circle cx="30" cy="30" r="6" fill="#FF5C8D" stroke="#FFF" stroke-width="2"/>
+
+            </svg>
+
+            <!-- Tombol Utama -->
+
+            <button
+                id="magicSnoopyBtn"
+                type="button"
+                onclick="openSnoopySpotlight(event)"
+                class="ribbon-btn relative z-10 text-white font-cute font-bold text-base sm:text-lg px-8 py-4 rounded-full flex items-center gap-3"
+            >
+                <span class="text-2xl">🐶</span>
+                <span>Klik Akuu! Ada Kejutan Snoopy ✨</span>
+            </button>
+
+        </div>
+
+        <span class="text-xs text-pink-400 font-semibold mt-2.5">(cobaa klik tombol berpita di atass yaa!)</span>
+
+    </div>
+
+</section>
+
+
+<!-- 2. SECTION: SNOOPY -->
+
+<section id="snoopy-like" class="coquette-card rounded-[2.5rem] p-6 sm:p-10 relative">
+
+    <div class="text-center mb-8">
+
+        <span class="inline-block bg-pink-100 text-pink-600 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-2 border border-pink-200">
+            ♡ Ceyinn's Top Favorite ♡
+        </span>
+
+        <h2 class="text-2xl sm:text-4xl font-bold text-pink-600 flex items-center justify-center gap-2">
+            <span>🎀</span>
+            <span>thing that i like a lot</span>
+            <span>🎀</span>
+        </h2>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+        <div class="md:col-span-5 flex flex-col items-center">
+
+            <div class="relative bg-gradient-to-b from-pink-100 to-rose-100 p-5 rounded-[2rem] border-4 border-pink-300 shadow-lg w-full max-w-xs flex flex-col items-center animate-wiggle-hover">
+
+                <div class="relative w-56 h-56 flex items-center justify-center">
+
+                    <span class="snoopy-sparkle top-2 left-3">✨</span>
+                    <span class="snoopy-sparkle bottom-4 right-2">💖</span>
+
+                    <img
+                        src="https://assets.jamcity.com/20210419054719/snoopy-pop-illustration-icon-bottom-right.png"
+                        alt="Snoopy dan Woodstock"
+                        class="w-full h-full object-contain drop-shadow-md animate-float snoopy-image"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="mt-2 bg-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow">
+                    🐾 Snoopy & Woodstock ♡
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="md:col-span-7 space-y-3 text-left bg-pink-50/80 p-5 sm:p-6 rounded-3xl border-2 border-pink-200">
+
+            <h3 class="text-xl sm:text-2xl font-bold text-pink-600 flex items-center gap-2">
+                <span>🐶</span> Profil Karakter: Snoopy (Peanuts)
+            </h3>
+
+            <ul class="space-y-2.5 text-sm sm:text-base text-pink-900/90 font-medium leading-relaxed">
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">🎀</span>
+                    <span><strong>Identitas & Ras:</strong> Anjing ras <em>Beagle</em> berwarna putih ikonik dengan telinga hitam dan bintik hitam dari komik klasik <em>Peanuts</em>.</span>
+                </li>
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">🎀</span>
+                    <span><strong>Sifat & Kepribadian:</strong> Super ekspresif, penuh imajinasi tinggi, setia kawan, santai, dan sering berkhayal menjadi pilot maupun penulis di atas atap rumah merahnya.</span>
+                </li>
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">🎀</span>
+                    <span><strong>Sahabat Setia:</strong> Selalu ditemani burung kuning mungil bernama <strong>Woodstock</strong> yang menggemaskan.</span>
+                </li>
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">🎀</span>
+                    <span><strong>Vibes:</strong> Gemoy maksimal dalam bentuk boneka, gantungan kunci, stiker, piyama, sampai aksesori sehari-hari!</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="mt-7 bg-gradient-to-r from-pink-100 via-rose-100 to-pink-100 border-2 border-dashed border-pink-400 rounded-2xl p-4 sm:p-5 text-center shadow-sm">
+
+        <p class="font-handwriting text-base sm:text-xl font-bold text-pink-700">
+            iniii bagiann yang paliiinngggg akuu sukaa, apapunn ituu asal snoopy akuu sukaa semuaa 🐶💖🎀
+        </p>
+
+    </div>
+
+</section><!-- 3. SECTION: MY FAVORITE DRINK -->
+
+<section id="fav-drink" class="coquette-card rounded-[2.5rem] p-6 sm:p-10 relative">
+
+    <div class="text-center mb-8">
+
+        <span class="inline-block bg-pink-100 text-pink-600 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-2 border border-pink-200">
+            ♡ Ceyinn's Moodbooster ♡
+        </span>
+
+        <h2 class="text-2xl sm:text-4xl font-bold text-pink-600 flex items-center justify-center gap-2">
+            <span>🥛</span>
+            <span>my favorite drink</span>
+            <span>🥛</span>
+        </h2>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+        <div class="md:col-span-5 flex flex-col items-center">
+
+            <div class="relative bg-gradient-to-b from-sky-50 via-white to-pink-100 p-5 rounded-[2rem] border-4 border-pink-300 shadow-lg w-full max-w-xs flex flex-col items-center animate-wiggle-hover">
+
+                <svg class="w-52 h-56 drop-shadow-md animate-float" viewBox="0 0 200 230" fill="none">
+
+                    <path d="M126 42L142 14L154 20" stroke="#FF5C8D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    <path d="M58 55L82 32H134L146 55H58Z" fill="#E0F2FE" stroke="#1E3A8A" stroke-width="3.5" stroke-linejoin="round"/>
+
+                    <path d="M134 32L146 55L162 66L146 42L134 32Z" fill="#BAE6FD" stroke="#1E3A8A" stroke-width="3.5" stroke-linejoin="round"/>
+
+                    <rect x="58" y="55" width="88" height="145" rx="6" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="3.5"/>
+
+                    <path d="M146 55L162 66V192L146 200V55Z" fill="#DBEAFE" stroke="#1E3A8A" stroke-width="3.5" stroke-linejoin="round"/>
+
+                    <path d="M60 57H144V92C125 102 85 84 60 95V57Z" fill="#2563EB"/>
+
+                    <text x="102" y="77" text-anchor="middle" fill="#FFFFFF" font-family="Fredoka, sans-serif" font-weight="700" font-size="14">ULTRA MILK</text>
+
+                    <rect x="72" y="83" width="60" height="13" rx="6.5" fill="#FACC15"/>
+
+                    <text x="102" y="93" text-anchor="middle" fill="#1E3A8A" font-family="Fredoka, sans-serif" font-weight="700" font-size="8.5">FULL CREAM</text>
+
+                    <circle cx="88" cy="126" r="3.5" fill="#1E3A8A"/>
+
+                    <circle cx="116" cy="126" r="3.5" fill="#1E3A8A"/>
+
+                    <ellipse cx="81" cy="133" rx="5" ry="3" fill="#FF9EBB"/>
+
+                    <ellipse cx="123" cy="133" rx="5" ry="3" fill="#FF9EBB"/>
+
+                    <path d="M97 132C99 136 105 136 107 132" stroke="#1E3A8A" stroke-width="2.5" stroke-linecap="round"/>
+
+                </svg>
+
+                <div class="mt-2 bg-sky-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow">
+                    🥛 Ultra Milk Full Cream ♡
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="md:col-span-7 space-y-3 text-left bg-pink-50/80 p-5 sm:p-6 rounded-3xl border-2 border-pink-200">
+
+            <h3 class="text-xl sm:text-2xl font-bold text-pink-600 flex items-center gap-2">
+                <span>🐄</span> Detail Minuman: Susu Ultra Full Cream
+            </h3>
+
+            <ul class="space-y-2.5 text-sm sm:text-base text-pink-900/90 font-medium leading-relaxed">
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">✨</span>
+                    <span><strong>Komposisi Utama:</strong> Terbuat dari 100% susu sapi segar alami berkualitas tinggi tanpa tambahan pengawet maupun pemanis buatan.</span>
+                </li>
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">✨</span>
+                    <span><strong>Rasa & Tekstur:</strong> Super <em>creamy</em>, gurih alami, lembut di tenggorokan, dan makin nikmat diminum pas lagi dingin!</span>
+                </li>
+
+                <li class="flex items-start gap-2">
+                    <span class="text-pink-500 font-bold">✨</span>
+                    <span><strong>Kandungan Gizi:</strong> Kaya kalsium, protein, fosfor, serta vitamin A, B2, dan D3 yang bikin energi balik lagi buat beraktivitas.</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="mt-7 bg-gradient-to-r from-pink-100 via-rose-100 to-pink-100 border-2 border-dashed border-pink-400 rounded-2xl p-4 sm:p-5 text-center shadow-sm">
+
+        <p class="font-handwriting text-base sm:text-xl font-bold text-pink-700">
+            inii susuu my favorite guwaa banhett dahh, enakk pooolll 🥛✨😋
+        </p>
+
+    </div>
+
+</section><!-- 4. SECTION: GIRLS BESTIES -->
+
+<section id="besties" class="coquette-card rounded-[2.5rem] p-6 sm:p-10 relative">
+
+    <div class="text-center mb-6">
+
+        <span class="inline-block bg-pink-100 text-pink-600 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-2 border border-pink-200">
+            ♡ Social Butterfly Energy ♡
+        </span>
+
+        <h2 class="text-2xl sm:text-4xl font-bold text-pink-600 flex items-center justify-center gap-2">
+            <span>👯‍♀️</span>
+            <span>i like being around people</span>
+            <span>💖</span>
+        </h2>
+
+        <div class="mt-3 inline-flex items-center gap-2 bg-rose-500 text-white font-cute font-bold text-xs sm:text-sm px-5 py-1.5 rounded-full border-2 border-white shadow-md animate-wiggle">
+            <span>🚫👦</span>
+            <span>ONLY GIRLS CAN HERE</span>
+            <span>🎀💅</span>
+        </div>
+
+    </div>
+
+    <!-- Kolase Foto Girls Friendship China dan Korea -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-8 px-2">
+
+        <!-- CHINESE GIRLS FRIENDSHIP -->
+
+        <div class="polaroid rounded-2xl -rotate-2 relative">
+
+            <span class="absolute -top-3 -left-3 text-2xl">🎀</span>
+
+            <div class="w-full h-52 rounded-xl overflow-hidden bg-pink-100">
+
+                <a href="https://www.cosmopolitan.com/tw/entertainment/celebrity-gossip/a70798316/tian-xiwei/" target="_blank" rel="noopener noreferrer">
+
+                    <img
+                        src="https://hips.hearstapps.com/hmg-prod/images/2a6cecc2-9e71-4833-a26b-26e483df5dd6.jpg?resize=980%3A%2A"
+                        alt="Girls friendship group photo"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+
+                </a>
+
+            </div>
+
+            <p class="mt-3 text-center font-handwriting font-bold text-pink-600 text-sm">
+                cute besties & giggles ♡
+            </p>
+
+        </div>
+
+
+        <!-- KOREAN GIRLS FRIENDSHIP -->
+
+        <div class="polaroid rounded-2xl rotate-2 relative">
+
+            <span class="absolute -top-3 right-2 text-2xl">🥂</span>
+
+            <div class="w-full h-52 rounded-xl overflow-hidden bg-pink-100">
+
+                <a href="https://in.pinterest.com/pin/717972365572857238/" target="_blank" rel="noopener noreferrer">
+
+                    <img
+                        src="https://i.pinimg.com/736x/2e/8b/c7/2e8bc79f74401ff4f08354b9f4cf2b61.jpg"
+                        alt="Girls best friends group selfie"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+
+                </a>
+
+            </div>
+
+            <p class="mt-3 text-center font-handwriting font-bold text-pink-600 text-sm">
+                girls party!! ✨🎂
+            </p>
+
+        </div>
+
+
+        <!-- GIRLS GROUP SELFIE -->
+
+        <div class="polaroid rounded-2xl -rotate-1 relative">
+
+            <span class="absolute -top-3 -right-3 text-2xl">💖</span>
+
+            <div class="w-full h-52 rounded-xl overflow-hidden bg-pink-100">
+
+                <a href="https://www.pinterest.com/pin/403001866668176689/" target="_blank" rel="noopener noreferrer">
+
+                    <img
+                        src="https://i.pinimg.com/736x/48/d8/52/48d8526c3d83ff7e1803b95e9f8322bf.jpg"
+                        alt="Girls friendship group selfie"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+
+                </a>
+
+            </div>
+
+            <p class="mt-3 text-center font-handwriting font-bold text-pink-600 text-sm">
+                only girls can here 💅🌸
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="bg-gradient-to-r from-pink-100 via-rose-100 to-pink-100 border-2 border-dashed border-pink-400 rounded-2xl p-5 sm:p-6 text-center shadow-sm">
+
+        <p class="font-handwriting text-base sm:text-xl font-bold text-pink-700 leading-relaxed">
+            akuu sukaa banget sosialisaii samaa orang karnaa memang energy kuu beginii HAHAHAHAHAHA, apalagii kaloo lagi bareng bestie bestie and konco kentel akuu 👯‍♀️💖✨
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- 5. BAGIAN PENUTUP & COPYRIGHT -->
+
+<footer class="text-center space-y-6 pt-4">
+
+    <div class="coquette-card rounded-[2.5rem] p-7 sm:p-10 relative overflow-hidden">
+
+        <p class="font-cute text-lg sm:text-2xl font-bold text-pink-600 max-w-2xl mx-auto leading-relaxed">
+            terimakaasiii yaa yang sudaa baca web inii, semogaa dengan ini kalian makin mengenal akuu yaa 🎀🌷💖
+        </p>
+
+    </div>
+
+    <div class="text-xs sm:text-sm font-semibold text-pink-500 pb-6">
+        © 2026 Selin Yuliana (Ceyinn). Made with 🎀 & lots of Snoopy love. All Rights Reserved.
+    </div>
+
+</footer>
+
+</main><!-- MODAL SPOTLIGHT SNOOPY -->
+
+<div id="snoopySpotlightOverlay" onclick="closeSnoopySpotlight()" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-sm transition-opacity duration-300 px-4">
+
+    <div class="light-rays"></div>
+
+    <div onclick="event.stopPropagation()" class="snoopy-spotlight-box relative z-10 bg-gradient-to-b from-white via-pink-50 to-pink-100 border-4 border-pink-300 rounded-[2.5rem] p-7 sm:p-10 max-w-sm w-full text-center">
+
+        <button
+            id="closeSpotlightBtn"
+            type="button"
+            onclick="closeSnoopySpotlight()"
+            class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-pink-500 text-white font-bold border-2 border-white shadow-md hover:bg-pink-600 transition cursor-pointer"
+        >
+            ✕
+        </button>
+
+        <span class="inline-block bg-pink-500 text-white text-xs font-bold px-3.5 py-1 rounded-full mb-3 shadow">
+            ✨ TADAAA! SNOOPY APPEAR! ✨
+        </span>
+
+        <div class="my-3 flex justify-center">
+
+            <div class="relative w-44 h-44 flex items-center justify-center">
+
+                <span class="snoopy-sparkle top-0 left-1">✨</span>
+                <span class="snoopy-sparkle bottom-1 right-0">💗</span>
+
+                <img
+                    src="https://assets.jamcity.com/20210419054719/snoopy-pop-illustration-icon-bottom-right.png"
+                    alt="Snoopy dan Woodstock"
+                    class="w-full h-full object-contain animate-snoopy-dance drop-shadow-xl snoopy-image"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </div>
+
+        <h3 class="font-cute text-2xl font-bold text-pink-600">
+            allooo dari Snoopy & Ceyinn! 🐶🎀
+        </h3>
+
+        <p class="text-sm text-pink-800/90 font-semibold mt-1.5">
+            makasiii udah klik tombol berpita ini, have a super sweet day yaa! ✨
+        </p>
+
+        <p class="text-[11px] text-pink-400 mt-3">
+            (layar akan kembali terang otomatis atau klik di luar kotak)
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    let autoCloseTimer = null;
+
+
+    function playWebAudioChime() {
+
+        try {
+
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+
+            if (!AudioCtx) return;
+
+            const ctx = new AudioCtx();
+
+            const notes = [523.25, 659.25, 783.99, 1046.50];
+
+            notes.forEach((freq, idx) => {
+
+                const osc = ctx.createOscillator();
+
+                const gain = ctx.createGain();
+
+                osc.type = 'sine';
+
+                osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+
+                gain.gain.setValueAtTime(0.12, ctx.currentTime + idx * 0.08);
+
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.08 + 0.35);
+
+                osc.connect(gain);
+
+                gain.connect(ctx.destination);
+
+                osc.start(ctx.currentTime + idx * 0.08);
+
+                osc.stop(ctx.currentTime + idx * 0.08 + 0.35);
+
+            });
+
+        } catch (err) {}
+
+    }
+
+
+    function openSnoopySpotlight(e) {
+
+        if (e) e.stopPropagation();
+
+        clearTimeout(autoCloseTimer);
+
+        const overlay = document.getElementById('snoopySpotlightOverlay');
+
+        overlay.classList.remove('hidden');
+
+        overlay.classList.add('flex');
+
+        playWebAudioChime();
+
+        autoCloseTimer = setTimeout(closeSnoopySpotlight, 4500);
+
+    }
+
+
+    function closeSnoopySpotlight() {
+
+        clearTimeout(autoCloseTimer);
+
+        const overlay = document.getElementById('snoopySpotlightOverlay');
+
+        overlay.classList.add('hidden');
+
+        overlay.classList.remove('flex');
+
+    }
+
+
+    // Partikel Pita & Hati Jatuh di Background
+
+    const fallingContainer = document.getElementById('falling-container');
+
+    const cuteSymbols = ['🎀', '💖', '✨', '🌷', '🐾', '♡'];
+
+
+    function createFallingItem() {
+
+        const item = document.createElement('div');
+
+        item.classList.add('falling-item');
+
+        item.textContent = cuteSymbols[Math.floor(Math.random() * cuteSymbols.length)];
+
+        item.style.left = Math.random() * 100 + 'vw';
+
+        item.style.fontSize = (Math.random() * 12 + 14) + 'px';
+
+        const duration = Math.random() * 5 + 6;
+
+        item.style.animationDuration = duration + 's';
+
+        fallingContainer.appendChild(item);
+
+        setTimeout(() => item.remove(), duration * 1000);
+
+    }
+
+    setInterval(createFallingItem, 900);
+
+
+    // Efek Klik Burst Hati di Seluruh Halaman
+
+    document.addEventListener('click', (e) => {
+
+        const hearts = ['🎀', '💖', '✨', '♡'];
+
+        for (let i = 0; i < 5; i++) {
+
+            const span = document.createElement('span');
+
+            span.className = 'click-heart text-sm sm:text-base';
+
+            span.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+            span.style.left = e.clientX + 'px';
+
+            span.style.top = e.clientY + 'px';
+
+            const angle = (Math.PI * 2 * i) / 5;
+
+            const dist = 35 + Math.random() * 25;
+
+            span.style.setProperty('--tx', `${Math.cos(angle) * dist}px`);
+
+            span.style.setProperty('--ty', `${Math.sin(angle) * dist - 20}px`);
+
+            document.body.appendChild(span);
+
+            setTimeout(() => span.remove(), 800);
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
